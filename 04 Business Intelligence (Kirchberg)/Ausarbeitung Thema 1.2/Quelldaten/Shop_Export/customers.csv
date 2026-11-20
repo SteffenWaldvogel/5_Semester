@@ -1,0 +1,28 @@
+customer_id,email,first_name,last_name,gender,birthdate,street,zip,city,country,created_at,newsletter,customer_type,erp_customer_no
+1001,max.mythenmetz@example.de,Max,Mythenmetz,m,1988-10-22,Hauptstr. 12,88212,Ravensburg,Germany,2023-12-23T08:08:46Z,false,b2c,1001
+1002,anna.berg@example.de,Anna,Dr. Berg,f,1979-03-14,Seestraße 5,88045,Friedrichshafen,Germany,2023-03-30T06:32:30Z,true,b2c,1002
+1003,tom.berg@example.de,Tom,Berg,m,,Seestraße 5,88045,Friedrichshafen,Deutschland,2026-05-10T15:58:13Z,true,b2c,
+1004,jonas.steiner@example.de,Jonas,Steiner,m,1995-01-30,Lindenallee 7a,1067,Dresden,Germany,2025-07-07T08:05:19Z,false,b2c,1005
+1005,lena.hoffmann@example.de,Lena,Hoffmann,f,1990-12-05,Rosenweg 9,20095,Hamburg,Germany,2023-12-16T12:02:12Z,true,b2c,
+1006,peter.gross@example.de,Peter,Gross,m,1965-05-19,Am Markt 1,50667,Köln,Germany,2026-09-29T17:37:32Z,true,b2c,
+1007,sophie.wagner@example.at,Sophie,Wagner,f,1998-08-08,Kirchgasse 15,6900,Bregenz,Austria,2024-08-28T08:15:28Z,true,b2c, 1008 
+1008,luca.brunner@example.ch,Luca,Brunner,m,1900-01-01,Bahnhofstrasse 22,8400,Winterthur,Switzerland,2025-11-27T09:03:06Z,false,b2c,
+1009,ali.demir@example.de,Ali,Demir,d,,Industriestr. 3,40210,Düsseldorf,Germany,2023-09-22T21:09:34Z,false,b2c,1011
+1010,marie.schulz@example.de,Marie,Schulz,,2001-04-01,Gartenstraße 30,4109,Leipzig,DE,2024-03-07T10:02:34Z,true,b2c,
+1011,hannah.koch@example.de,Hannah,Koch,m,1993-06-17,Muehlenstr. 11,88214,Ravensburg,Deutschland,2025-12-03T10:47:31Z,true,b2c,1014
+1012,david.richter@example.de,David,Richter,m,1983-01-09,Schlossallee 8,70173,Stuttgart,DE,2026-06-29T07:35:02Z,false,b2c,1015
+1013,julia.fischer@example.de,Julia,Fischer,f,,Waldweg 4,99084,Erfurt,Deutschland,2022-08-17T07:44:59Z,false,b2c,
+1014,niklas.weber@example.de,Nik,Weber,m,1989-10-10,Ringstraße 60,60311,Frankfurt am Main,Germany,2024-02-07T16:09:48Z,true,b2c,
+1015,emma.schaefer@example.de,Emma,Schäfer,f,1970-12-24,Poststraße 13,88400,Biberach,Germany,2023-04-25T16:17:34Z,true,b2c,
+1016,paul.zimmermann@example.de,Paul,Zimmermann,m,,Bergstr. 21,88131,Lindau,Germany,2022-03-28T15:36:29Z,false,b2c,1020
+1017,clara.krueger@example.de,Clara,Krüger,f,1987-08-15,Sonnenstraße 19,90402,Nürnberg,DE,2026-03-09T11:38:48Z,false,b2c,1022
+1018,kasse@dc-oberschwaben.example,,DC Oberschwaben e.V.,,,Vereinsweg 3,88250,Weingarten,Germany,2023-03-17T15:18:58Z,true,b2b,
+1019,ben.hartmann@example.de,Ben,Hartmann,m,,Uferweg 2b,78462,Konstanz,DE,2023-06-05T14:16:29Z,false,b2c,1023
+1020,mia.lorenz@example.de,Mia,Lorenz,f,2003-09-09,Amselweg 10,88069,Tettnang,Germany,2023-05-16T20:25:54Z,false,b2c,
+1021,leon.schmitt@example.de,Leon,Schmitt,m,2031-11-30,Kastanienallee 33,10435,Berlin,Germany,2022-02-03T09:51:28Z,true,b2c,1024
+1022,laura.vogel@example.de,Laura,Vogel,f,1986-06-06,Talstraße 27,72070,Tübingen,Germany,2024-01-04T18:21:13Z,true,b2c,
+1023,finn.baumann@example.de,Finn,Baumann,m,,Hügelweg 1,88212,Ravensburg,Germany,2025-04-04T20:59:18Z,false,b2c,
+1024,jan.peters@example.de,Jan,Peters,m,1978-03-27,Nordring 40,26122,Oldenburg,Germany,2024-01-26T08:52:27Z,false,b2c,
+1025,lisa.meier@example.de,Lisa,Meier,,,Weinbergstraße 14,55116,Mainz,Germany,2025-05-13T15:19:49Z,true,b2c,
+1026,noah.franke@example.de,Noah,Franke,m,2000-02-14,Schulstraße 8,88212,Ravensburg,DE,2022-10-18T18:56:13Z,true,b2c,
+1027,ann.berg@example.de,Ann,Berg,f,,Seestr. 5,88045,Friedrichshafen,Germany,2026-09-02T12:32:14Z,false,b2c,

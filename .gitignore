@@ -1,0 +1,8 @@
+# Audioaufnahmen (zu groß für GitHub, Limit 100 MB)
+*.mp3
+
+# Eigenes Git-Repository (github.com/SteffenWaldvogel/BI)
+/04 Business Intelligence (Kirchberg)/BI/
+
+# Office-Lockdateien
+~$*

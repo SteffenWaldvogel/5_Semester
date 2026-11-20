@@ -1,0 +1,28 @@
+KdNr;Name1;Name2;Strasse;PLZ;Ort;Land;KdGruppe;Anrede;Geb_Dat;Telefon;EMail;VkNr;Gesperrt;Angelegt_am;Geaendert_am
+1001;Mythenmetz, Max;;Hauptstraße 12;88212;Ravensburg;DE;01;Herr;22.10.1988;0751 1234567;max.mythenmetz@example.de;V01;N;10.01.2021;10.01.2021 08:15:00
+1002;Dr. Berg, Anna;;Seestraße 5;88045;Friedrichshafen;DE;01;Frau;14.03.1979;000;anna.berg@example.de;V01;N;16.02.2021;16.02.2021 08:15:00
+1003;DC Oberschwaben e.V.;Dartclub;Vereinsweg 3;88250;Weingarten;DE;02;Firma;31.12.9999;000;vorstand@dc-oberschwaben.example;V01;N;25.03.2021;25.03.2021 08:15:00
+1004;Sportshop Allgäu GmbH;Inh. Franz Huber;Bahnhofstr. 44;87435;Kempten;DE;03;Firma;31.12.9999;000;einkauf@sportshop-allgaeu.example;V01;N;01.05.2021;01.05.2021 08:15:00
+1005;Steiner, Jonas;;Lindenallee 7a;01067;Dresden;DE;01;Herr;30.01.1995;000;jonas.steiner@example.de;V04;N;07.06.2021;07.06.2021 08:15:00
+1006;Hoffmann, Lena;;Rosenweg 9;20095;Hamburg;DE;01;Frau;05.12.1990;000;lena.hoffmann@example.de;V02;N;14.07.2021;14.07.2021 08:15:00
+1007;Dr. med. Groß, Peter;;Am Markt 1;50667;Köln;DE;01;Herr;19.05.1965;+49 221 998877;peter.gross@example.de;V03;N;20.08.2021;20.08.2021 08:15:00
+1008;Wagner, Sophie;;Kirchgasse 15;6900;Bregenz;AT;01;Frau;08.08.1998;000;sophie.wagner@example.at;V01;N;26.09.2021;26.09.2021 08:15:00
+1009;Brunner, Luca;;Bahnhofstrasse 22;8400;Winterthur;CH;01;Herr;29.02.1992;000;luca.brunner@example.ch;V01;N;02.11.2021;02.11.2021 08:15:00
+1010;Dartclub Nordlicht;Dartclub;Deichstraße 18;28195;Bremen;DE;02;Firma;31.12.9999;000;info@dc-nordlicht.example;V02;N;09.12.2021;09.12.2021 08:15:00
+1011;Demir, Ali;;Industriestr. 3;40210;Düsseldorf;DE;01;Herr;11.11.1985;000;ali.demir@example.de;V03;N;15.01.2022;15.01.2022 08:15:00
+1012;Schulz, Marie;;Gartenstraße 30;04109;Leipzig;DE;01;Frau;01.04.2001;000;marie.schulz@example.de;V04;N;21.02.2022;21.02.2022 08:15:00
+1013;Neumann, Felix;;Birkenweg 2;80331;München;D;01;Herr;23.09.1977;000;felix.neumann@example.de;V01;N;30.03.2022;30.03.2022 08:15:00
+1014;Koch, Hannah;;Mühlenstr. 11;88214;Ravensburg;DE;01;Frau;17.06.1993;000;hannah.koch@example.de;V01;N;06.05.2022;06.05.2022 08:15:00
+1015;Richter, David;;Schlossallee 8;70173;Stuttgart;DE;01;Herr;09.01.1983;000;david.richter@example.de;V01;N;12.06.2022;12.06.2022 08:15:00
+1016;Sportbedarf Nord GmbH;Großhandel;Hafenstraße 77;24103;Kiel;DE;03;Firma;31.12.9999;000;order@sportbedarf-nord.example;V02;N;19.07.2022;19.07.2022 08:15:00
+1017;Fischer, Julia;;Waldweg 4;99084;Erfurt;DE;01;Frau;03.03.1996;000;julia.fischer@example.de;V04;N;25.08.2022;25.08.2022 08:15:00
+1018;Weber, Niklas;;Ringstraße 60;60311;Frankfurt a.M.;DE;01;Herr;10.10.1989;000;niklas.weber@example.de;V03;N;01.10.2022;01.10.2022 08:15:00
+1019;Schäfer, Emma;;Poststraße 13;88400;Biberach;DE;01;Frau;24.12.1970;000;emma.schaefer@example.de;V01;N;07.11.2022;07.11.2022 08:15:00
+1020;Zimmermann, Paul;;Bergstr. 21;88131;Lindau;DE;01;Herr;07.07.1999;000;;V01;N;14.12.2022;14.12.2022 08:15:00
+1021;Lange, Erik;;Feldweg 6;99999;Schwerin;DE;01;Herr;02.02.1975;000;erik.lange@example.de;V02;N;20.01.2023;20.01.2023 08:15:00
+1022;Krüger, Clara;;Sonnenstraße 19;90402;Nuernberg;DE;01;Frau;15.08.1987;000;clara.krueger@example.de;V01;N;26.02.2023;26.02.2023 08:15:00
+1023;Hartmann, Ben;;Uferweg 2b;78462;Konstanz;DE;01;Herr;05.05.1994;000;ben.hartmann@example.de;V01;N;04.04.2023;04.04.2023 08:15:00
+1024;Schmitt, Leon;;Kastanienallee 33;10435;Berlin;DE;01;Herr;30.11.1991;000;leon.schmitt@example.de;V04;N;11.05.2023;11.05.2023 08:15:00
+1025;Vogel, Laura;;Talstraße 27;72070;Tübingen;DE;01;Frau;06.06.1986;000;laura.vogel@example.de;V01;N;17.06.2023;17.06.2023 08:15:00
+1026;Sauer, Nina;;Dorfstr. 5;17489;Greifswald;DE;01;Frau;18.04.1982;000;;V02;N;24.07.2023;24.07.2023 08:15:00
+1027;Peters, Jan;;Nordring 40;26122;Oldenburg;DE;01;Herr;27.03.1978;000;jan.peters@example.de;V02;N;30.08.2023;30.08.2023 08:15:00

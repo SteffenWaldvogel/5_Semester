@@ -1,0 +1,66 @@
+﻿P-Nr;System;Tabelle;Schlüssel/Zeile;Eingebautes Problem
+P01;ERP/Shop;ERP_Kunde / customers;KdNr 1001… vs customer_id 1001…;Numerische Schlüssel beider Systeme überlappen → Schlüsselkollision, künstlicher DWH-Schlüssel + Mapping-Tabelle nötig
+P02;ERP;ERP_Kunde;alle Privatkunden;"Name1 = 'Titel Nachname, Vorname' in einem Feld (Separierung/Elementizing nötig); bei Firmen/Vereinen = Firmenname (Homonym 'Name1')"
+P03;ERP;ERP_Kunde;Geb_Dat;Null-Kodierung 31.12.9999 für unbekanntes Geburtsdatum (SAP-Stil)
+P04;ERP;ERP_Kunde;Telefon;Default-Wert '000' statt NULL
+P05;ERP;ERP_Kunde;1013 (k14);Land 'D' statt 'DE' – uneinheitliche Kodierung
+P06;ERP;ERP_Kunde;1021 (k22);PLZ 99999 = Platzhalter (unzulässiger Wert) → Plausibilitätsprüfung
+P07;ERP;ERP_Kunde;1022 (k23);Ort 'Nuernberg' vs. 'Nürnberg' (Zeichenketten vereinheitlichen)
+P08;ERP;ERP_Kunde;Strasse;Abkürzungen 'Str.' vs. 'Straße' vs. 'strasse' (Standardizing)
+P09;ERP;ERP_Kunde;KdGruppe;"Kodierung 01/02/03 ohne Dokumentation; CRM: 'A-Kunde/B/C-Kunde' bzw. Typ; Shop: b2c/b2b → schwache Attributäquivalenz"
+P10;ERP;ERP_Kunde;Geaendert_am;"Zeitstempel ermöglicht Delta-Extraktion; zwei Exportstände (30.09./31.10.) → Historisierung Gültig-von/bis, Current Flag; Mehrfachänderungen zwischen Läufen gehen verloren"
+P11;ERP;ERP_Kunde;1005 Umzug, 1019 Heirat, 1013 Gruppenwechsel, 1027 gesperrt, 1028 neu (nur im Stand 31.10.);Konkrete Änderungsfälle zwischen den Ständen für die Historisierung
+P12;ERP;ERP_Artikel;alle;Sprechender Schlüssel ArtNr = Kategorie-Material-LfdNr-Variante → zerlegen (Schematransformation)
+P13;Shop;products;st-tu-0001-v2 / FLNY0010V2 / 'ZU-PL-0042-V1 ';Uneinheitliche Schreibweise des Schlüssels (Groß/Klein, fehlende Trennzeichen, Leerzeichen) → Standardisierung vor Join
+P14;ERP;ERP_Artikel;ZU-PA-0045-V1;"MwSt-Code 2 (7 %) – Code nur über Mapping verständlich; Brutto/Netto-Umrechnung abhängig vom Code"
+P15;Shop;products;alle;Gewicht in kg (ERP: g), Preis brutto (ERP: netto) → Maßeinheiten/Preisbasis vereinheitlichen
+P16;Shop;products;BO-SI-0031-V1-CH;Währung CHF → Umrechnung über Wechselkurstabelle
+P17;Shop;products;GC-0001;"Produkt nur im Shop (Gutschein) – kein Pendant im ERP; BK-TX-0050-V2 nur im ERP (extensionale Überlappung)"
+P18;Shop;products;alle;Warengruppe im ERP eigene Tabelle (Code), im Shop Textattribut 'category' (Attribut/Tabelle-Konflikt, Synonyme Zubehör/Accessories)
+P19;ERP;ERP_Kunde;EMail 1020, 1026;Fehlender Wert (leer) – Shop hat Pflichtfeld E-Mail (konfligierende NOT-NULL-Bedingung)
+P20;ERP;ERP_Auftragspos;EPreis_Netto ≠ ERP_Artikel.Preis_Netto;Preis an der Entität (Artikel) UND an der Beziehung (Position) – allgemeinere Variante ins Zielschema (Skript-Beispiel 8.2.2.5)
+P21;ERP;ERP_Auftragspos;Rabatt_Pct 0–100;Rabatt in Prozent (0–100) vs. Shop discount_rate als Anteil (0–1) → Bereichseinschränkungs-Konflikt
+P22;ERP;ERP_Auftrag;Status 10/20/30/90;"Homonym 'Status': ERP-Auftragsstatus (Codes) vs. Shop order status (Text) vs. CRM Kontaktstatus; Stornos (90) müssen gefiltert werden"
+P23;ERP;ERP_Verkaeufer;V99;Pseudo-Verkäufer 'Online-Shop' – Kanal als Verkäufer modelliert (schematische Heterogenität)
+P24;ERP;ERP_Auftragspos;50043/1;ArtNr ST-TU-0099-V1 existiert nicht in ERP_Artikel → referenzielle Integrität verletzt
+P25;ERP;ERP_Auftragspos;50044/2;Negative Menge -1 = Rücknahme/Korrekturposition (Null/negativ mit Semantik, unzulässig als Verkaufsmenge?) → Regel definieren
+P26;ERP;ERP_Auftrag;50045;KdNr 1099 existiert nicht in ERP_Kunde (gelöschter Kunde) → referenzielle Integrität
+P27;Shop;customers;1002 und 1027;Dublette: dieselbe Person mit zwei Accounts (Anna/Ann Berg, gleiche Adresse) → Record Linkage über Name+PLZ
+P28;Shop;customers;1004, 1010;PLZ ohne führende Null (1067 statt 01067) – Datentypkonflikt Zahl vs. Text
+P29;Shop;customers;country;Land als 'Germany'/'Deutschland'/'DE' gemischt → Standardisierung auf ISO-Code
+P30;Shop;customers;gender;"Geschlecht m/f/d/leer; ERP hat nur Anrede Herr/Frau/Firma; CRM 1/2 → Kodierungen vereinheitlichen; Widerspruch bei k15 (ERP 'Frau', Shop 'm')"
+P31;Shop;customers;1008, 1021;birthdate 1900-01-01 (Default) und 2031-11-30 (Zukunft) → unzulässige Werte, Plausibilität
+P32;Shop;customers;1007, 1015;erp_customer_no mit Leerzeichen bzw. führender Null (5-stellig mit 0) → Trim/Typkonvertierung vor Mapping
+P33;Shop;customers;1002, 1006;Titel im Nachnamen ('Dr. Berg'), ß→ss ('Gross') → Matching erschwert
+P34;Shop;customers;created_at;ISO-8601 mit Uhrzeit in UTC vs. ERP DD.MM.YYYY lokal → Datumsformat + Zeitzone
+P35;Shop;customers;1018;Verein 'DC Oberschwaben e.V.' im Shop als eigener Kunde (b2b) und im ERP als Kunde 1003 – gleiche Organisation, unterschiedliche E-Mail → Objektidentifikation ohne Schlüssel
+P36;Shop;orders;90039;customer_id 1099 existiert nicht in customers (Account gelöscht) → referenzielle Integrität
+P37;Shop;order_items;90040/1;qty 0 (unzulässiger Wert) → filtern/protokollieren
+P38;Shop;order_items;discount_rate;Rabatt als Anteil (0.10) und leer statt 0 → unterschiedliche Null-Kodierung und Wertebereich ggü. ERP Rabatt_Pct
+P39;Shop;orders;alle;Kein Attribut 'Kanal' und kein 'Verkäufer' – implizit immer Online (fehlendes, aber impliziertes Attribut)
+P40;Shop;orders;payment_method;"Zahlungsart als Attribut am Auftrag; im ERP eigene Tabelle ERP_Zahlung (Attribut/Tabelle-Konflikt); Kodierung paypal/PP"
+P41;ERP/Shop;ERP_Auftrag.Ext_Referenz ↔ orders.order_id;10 Aufträge;"Shop-Aufträge wurden ins ERP importiert (Kanal SHOP, Ext_Referenz 'WEB-<order_id>', Datum +1 Tag, Preise netto umgerechnet) → extensionale Überlappung der Fakten, Dubletten beim Umsatz vermeiden; nicht alle Shop-Aufträge sind im ERP (pending/cancelled, junge Aufträge)"
+P42;CRM;Mitarbeiter;alle;"Mitarbeiter als 'Nachname, Vorname' + Kürzel; ERP_Verkaeufer per VkNr → Zuordnung nur über Namen (kein gemeinsamer Schlüssel); 'Brandt, Nico' ohne ERP-Pendant; Schreibvariante 'T. Mueller' in Aktivitäten"
+P43;CRM;Kontakte;CRM-0001 / CRM-0030;"Dublette mit Tippfehler ('Mythenmez'), unterschiedliche Groß-/Kleinschreibung der E-Mail; Geschlecht 2 vs. Anrede Herr im ERP (Widerspruch wie Tabelle 8.3)"
+P44;CRM;Kontakte;Name;Vollständiger Name inkl. Titel in einem Feld ('Dr. Anna Berg') → Elementizing (Titel/Vorname/Nachname)
+P45;CRM;Kontakte;Adresse;"Adresse als ein Freitextfeld 'Straße Nr, PLZ Ort[, Land]' → Separierung in Komponenten; Attribut/Tabelle-Konflikt zu ERP-Spalten"
+P46;CRM;Kontakte;Geburtstag;Geburtsdatum als Text: MM/DD/YYYY, DD.MM.YY (zweistelliges Jahr → Jahrhundertregel), 'n/a', 'unbekannt', leer → Standardisierung + uneinheitliche Null-Kodierung
+P47;CRM;Kontakte;Geschlecht;Kodierung 1/2/leer (ERP: Anrede, Shop: m/f/d)
+P48;CRM;Kontakte;Segment;'A-Kunde'/'A'/'B'/'C-Kunde' gemischt (Schreibvarianten) und andere Dimension als ERP KdGruppe → schwache Attributäquivalenz, kleinster gemeinsamer Nenner
+P49;CRM;Kontakte;CRM-0006;Alte Adresse (Umzug nur im ERP) → Aktualität/Widerspruch, Quellsystem priorisieren
+P50;CRM;Kontakte;CRM-0011;ERP_KdNr als '1.012' mit Tausenderpunkt → Typkonvertierung
+P51;CRM;Kontakte;Telefon;Telefonnummern in vier Formaten + Default '999-999'
+P52;CRM;Kontakte;Newsletter;'x' / 'Ja' / leer vs. Shop true/false vs. ERP nicht vorhanden (fehlendes Attribut)
+P53;CRM;Kontakte;Verein;"'DC Oberschwaben e.V.' vs. 'DC Oberschwaben' (Schreibvariante); Verein ist zugleich ERP-Kunde 1003 → Householding / Gruppenbildung"
+P54;CRM;Kontakte;CRM-0025, CRM-0019;Letzter Kontakt 2024 → Aktualitätsproblem (Status trotzdem 'aktiv')
+P55;CRM;Kontakte;CRM-0027, CRM-0028;Leads nur im CRM (Einschluss/Teilmenge) – keine ERP-/Shop-Daten → Belegungsregel für fehlende Kennzahlen
+P56;CRM;Kontakte;Status;Homonym 'Status' (aktiv/inaktiv/Lead) ggü. Auftragsstatus
+P57;CRM;Aktivitäten;A00071;KontaktID CRM-0999 existiert nicht → referenzielle Integrität
+P58;CRM;Aktivitäten;Dauer_min;-1 als Null-Kodierung für unbekannte Dauer
+P59;CRM;Aktivitäten;Typ;Synonyme 'Call'/'Telefonat', 'Mail'/'E-Mail' → Kodierung vereinheitlichen
+P60;Hilfstabellen;PLZ_Bundesland / Wechselkurse;-;Anreicherung (Bundesland aus PLZ, EUR-Umrechnung) und Plausibilitätsprüfung PLZ↔Land (Verification)
+P61;ERP;alle Exporte;-;Interoperabler Export: Semikolon-CSV, Zeichensatz Windows-1252 (Umlaute!), Dezimalkomma, Datum DD.MM.YYYY – Shop: Komma-CSV, UTF-8, Dezimalpunkt, ISO-Datum – CRM: Excel (syntaktische Heterogenität, Parser/Spaltentypen)
+P62;ERP;ERP_Kunde;zwei Stände;"Extraktionsart: ERP Delta über Geaendert_am möglich; Shop/CRM nur Vollabzug (nicht unterstützende Quelle: Excel-Export) → Begründung der Extraktionsstrategie"
+P63;CRM;Kontakte;Letzter Kontakt / Geburtstag;Echte Excel-Datumswerte neben Datums-Texten in derselben Datei → gemischte Spaltentypen
+P64;ERP;ERP_Lieferung;Teillieferungen L…-1/L…-2;"Lieferung als eigene Tabelle (1:n zum Auftrag, Teillieferungen); Shop kennt nur Status 'shipped' am Auftrag (Attribut/Tabelle-Konflikt); Lieferdatum zusätzlich redundant in ERP_Auftrag → Redundanz, führende Quelle festlegen"
+P65;ERP;ERP_Lieferung;L50099-1;"Retoure zu AufNr 50099, die im Export fehlt (Zeitraumfilter) → referenzielle Integrität; Versandart-Codes DHL/DPD/ABH/SPED undokumentiert; Lieferdatum leer bei offenen Lieferungen (Geliefert=0)"

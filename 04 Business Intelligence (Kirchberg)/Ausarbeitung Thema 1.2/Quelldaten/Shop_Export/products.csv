@@ -1,0 +1,26 @@
+sku,name,category,weight_kg,price_gross,currency,active
+ST-TU-0001-V1,Steel Dart – Steeldart Tungsten 90% 22g,Steel Darts,0.022,58.90,EUR,true
+st-tu-0001-v2,Steel Dart – Steeldart Tungsten 90% 24g,Steel Darts,0.024,58.90,EUR,true
+ST-TU-0002-V1,Steel Dart – Steeldart Tungsten 95% 23g Pro,Steel Darts,0.023,94.01,EUR,true
+ST-BR-0003-V1,Steel Dart – Steeldart Brass Einsteiger 21g,Steel Darts,0.021,15.35,EUR,true
+SD-TU-0004-V1,Soft Dart – Softdart Tungsten 80% 18g,Soft Darts,0.018,41.53,EUR,true
+SD-BR-0005-V1,Soft Dart – Softdart Brass 16g,Soft Darts,0.016,11.78,EUR,true
+SD-TU-0004-V2,Soft Dart – Softdart Tungsten 80% 20g,Soft Darts,0.020,41.53,EUR,true
+FL-NY-0010-V1,Flights – Flights Standard 100 Mikron,Flights,0.001,1.78,EUR,true
+FLNY0010V2,Flights – Flights Slim 100 Mikron,Flights,0.001,1.78,EUR,true
+FL-NY-0011-V1,Flights – Flights Standard 150 Mikron,Flights,0.001,2.62,EUR,true
+SH-NY-0020-V1,Shafts – Shafts Nylon medium,Shafts,0.002,2.26,EUR,true
+SH-AL-0021-V1,Shafts – Shafts Aluminium medium,Shafts,0.003,5.83,EUR,true
+SH-CB-0022-V1,Shafts – Shafts Carbon short,Shafts,0.002,9.40,EUR,true
+BO-SI-0030-V1,Dartboard – Dartboard Sisal Turnier,Boards,4.800,70.21,EUR,true
+BO-SI-0031-V1,Dartboard – Dartboard Sisal Profi Blade,Boards,5.200,105.91,EUR,true
+BO-EL-0032-V1,Dartboard – E-Dartboard Softtip Home,Boards,3.900,153.51,EUR,true
+ZU-ST-0040-V1,Accessory – Dartboard-Halterung Stahl,Accessories,0.650,17.73,EUR,true
+ZU-TX-0041-V1,Accessory – Dartmatte Teppich 3 m,Accessories,2.100,47.48,EUR,true
+ZU-PL-0042-V1 ,Accessory – Dart-Case Kunststoff,Accessories,0.180,10.59,EUR,true
+ZU-PL-0043-V1,Accessory – Spitzen Softtip 100 Stück,Accessories,0.030,4.64,EUR,true
+ZU-ST-0044-V1,Accessory – Spitzen Steel Ersatz 10 Stück,Accessories,0.015,5.35,EUR,true
+BK-TX-0050-V1,Apparel – Dart-Shirt DartPro Gr. M,Apparel,0.220,29.63,EUR,true
+ZU-PA-0045-V1,Accessory – Fachbuch 'Dart-Training',Accessories,0.410,20.87,EUR,true
+BO-SI-0031-V1-CH,Dartboard Sisal Profi Blade (CH),Boards,5.200,99.00,CHF,true
+GC-0001,Gift Card 25,Gift Cards,0.000,25.00,EUR,true
